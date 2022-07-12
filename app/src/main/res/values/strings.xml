@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Applicant Tracking System</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- start panel -->
+    <string name="title_activity_start">Applicant Tracking System</string>
+    <string name="start_panel_image">Start panel image </string>
+    <string name="start_panel_background">Start panel background</string>
+    <string name="start_for_freelancers">for freelancers</string>
+    <string name="start_for_companies">for companies</string>
+    <string name="start_choose_your_version">Choose your version</string>
+    <!-- login panel -->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="login_prompt_email">Email</string>
+    <string name="login_prompt_password">Password</string>
+    <string name="login_action_sign_in">Sign in</string>
+    <string name="login_text">Login</string>
+    <string name="login_register_text">You don\'t have an account?</string>
+    <string name="login_action_register">Sign up</string>
+    <string name="login_welcome">"Welcome!"</string>
+    <string name="login_invalid_username">Not a valid username</string>
+    <string name="login_invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_login_company">LoginCompanyActivity</string>
+    <string name="login_forgot_password">Forgot your password?</string>
+    <string name="or_text">or</string>
+
+    <!-- register panel -->
+    <string name="title_activity_company_register">CompanyRegisterActivity</string>
+    <string name="title_activity_freelancer_register">FreelancerRegisterActivity</string>
+    <string name="register_company">Register Company</string>
+    <string name="register_freelancer">Register</string>
+    <string name="register_prompt_repeat_password">Repeat password</string>
+    <string name="register_prompt_firstname">First name</string>
+    <string name="register_prompt_lastname">Last name</string>
+    <string name="register_prompt_phone">Phone number</string>
+    <string name="register_prompt_nip">Company nip</string>
+
+</resources>

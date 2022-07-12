@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2805" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/background.xml" value="0.345" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/background_selection_panel.xml" value="0.2805" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/buttons_background.xml" value="0.208" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/dark_background.xml" value="0.208" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/firstPanelImage_background.xml" value="0.209" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2805" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/login_background.xml" value="0.1915" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/login_forgot_password_button.xml" value="0.162" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/login_panel_background.xml" value="0.27" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/login_register_button.xml" value="0.2765" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/login_register_button_background.xml" value="0.1915" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/start_buttons_background.xml" value="0.209" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/drawable/start_panel_background.xml" value="0.209" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.12951807228915663" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout-w1240dp/activity_login_company.xml" value="0.12951807228915663" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout-w936dp/activity_login.xml" value="0.151171875" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout/activity_company_register.xml" value="0.33" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout/activity_freelancer_register.xml" value="0.33" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout/activity_login_company.xml" value="0.33" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout/activity_register.xml" value="0.3541666666666667" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout/activity_selection_panel.xml" value="0.33" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout/activity_start.xml" value="0.33" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout/content_selection_panel.xml" value="0.3125" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/layout/fragment_first.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/mipmap-anydpi-v26/firstPanelImage.xml" value="0.323" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.323" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/ApplicantTrackingSystem/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.323" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "696412446946",
+    "project_id": "applicant-tracking-syste-5e517",
+    "storage_bucket": "applicant-tracking-syste-5e517.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696412446946:android:28cbf5401741d74c0dbebb",
+        "android_client_info": {
+          "package_name": "com.example.applicanttrackingsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696412446946-3r8o43urli38lth4fnfbejbhu5psu4vf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjGR7GUDizAjpQ2CEY0WdI8DS22JCbXoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696412446946-3r8o43urli38lth4fnfbejbhu5psu4vf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
