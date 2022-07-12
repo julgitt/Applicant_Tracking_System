@@ -1,7 +1,12 @@
 # Applicant Tracking System (The project is not finished yet)
 Project created in Kotlin using Android Studio and Firebase.
 
-Front page illustration and application icon by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">Icons 8</a> from <a href="https://icons8.com/illustrations">Ouch!</a>
+Start page illustration and application icon by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">Icons 8</a> from <a href="https://icons8.com/illustrations">Ouch!</a>.
+
+I will probably replace these images with something made by myself in the future.
+
+Start, login and register pages with responsible UI are already finished.
+Currently I am working on connecting Firebase to the project and authorization.
 
 ![image](https://user-images.githubusercontent.com/95649808/178540823-5d6c9e92-5206-4961-8bb3-5c7afa0cf12a.png)
 
