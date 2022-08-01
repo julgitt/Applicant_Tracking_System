@@ -11,7 +11,7 @@
 
     <!-- Illustration by https://icons8.com/illustrations/author/zD2oqC8lLBBA from https://icons8.com/illustrations-->
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/start_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -97,5 +97,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/start_version_text"
             app:layout_constraintVertical_bias="0.81" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
