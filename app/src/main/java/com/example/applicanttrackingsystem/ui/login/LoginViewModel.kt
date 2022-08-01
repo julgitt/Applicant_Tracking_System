@@ -35,8 +35,6 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
     fun loginDataChanged(username: String, password: String) {
         if (!isUserNameValid(username)) {
             _loginForm.value = LoginFormState(usernameError = R.string.login_invalid_username)
-        } else if (!isPasswordValid(password)) {
-            _loginForm.value = LoginFormState(passwordError = R.string.login_invalid_password)
         } else {
             _loginForm.value = LoginFormState(isDataValid = true)
         }
@@ -51,8 +49,4 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         }
     }
 
-    // A placeholder password validation check
-    private fun isPasswordValid(password: String): Boolean {
-        return password.length > 5
-    }
 }

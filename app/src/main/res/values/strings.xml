@@ -25,6 +25,9 @@
     <string name="login_welcome">"Welcome!"</string>
     <string name="login_invalid_username">Not a valid username</string>
     <string name="login_invalid_password">Password must be >5 characters</string>
+    <string name="login_invalid_repeat_password">Passwords do not match</string>
+    <string name="login_invalid_nip">Not a valid NIP number</string>
+    <string name="login_invalid_phone">Not a valid phone number</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_login_company">LoginCompanyActivity</string>
     <string name="login_forgot_password">Forgot your password?</string>
@@ -40,5 +43,6 @@
     <string name="register_prompt_lastname">Last name</string>
     <string name="register_prompt_phone">Phone number</string>
     <string name="register_prompt_nip">Company nip</string>
+
 
 </resources>

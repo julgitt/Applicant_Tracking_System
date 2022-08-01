@@ -58,9 +58,6 @@ class LoginActivity : AppCompatActivity() {
             if (loginState.usernameError != null) {
                 username.error = getString(loginState.usernameError)
             }
-            if (loginState.passwordError != null) {
-                password.error = getString(loginState.passwordError)
-            }
         })
 
         loginViewModel.loginResult.observe(this@LoginActivity, Observer {
@@ -113,7 +110,6 @@ class LoginActivity : AppCompatActivity() {
             registerButton.setOnClickListener {
                 when (intent.getStringExtra("type")!!) {
                     "company" -> {
-
                         startActivity(companyActivity)
                     }
                     "freelancer" -> {
