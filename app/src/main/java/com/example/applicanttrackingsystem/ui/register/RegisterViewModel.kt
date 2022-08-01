@@ -4,10 +4,10 @@ import com.example.applicanttrackingsystem.ui.login.LoggedInUserView
 import com.example.applicanttrackingsystem.ui.register.RegisterFormState
 import com.example.applicanttrackingsystem.ui.register.RegisterResult
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
 import android.util.Patterns
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.example.applicanttrackingsystem.data.LoginRepository
 import com.example.applicanttrackingsystem.data.Result
 
