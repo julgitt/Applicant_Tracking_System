@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="@dimen/big_margin"
                 android:gravity="center"
                 android:text="@string/register_freelancer"
                 android:textColor="@color/secondaryColor"
@@ -44,13 +44,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
 
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="@dimen/huge_margin"
 
                 android:background="@color/transparent_very_dark"
                 android:hint="@string/login_prompt_email"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
-                android:paddingStart="10dp"
+                android:paddingStart="@dimen/small_margin"
                 android:selectAllOnFocus="true"
                 android:textColor="@color/transparent_light"
                 android:textColorHint="@color/white"
@@ -66,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
 
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="@dimen/bigger_medium_margin"
 
                 android:background="@color/transparent_very_dark"
                 android:hint="@string/login_prompt_password"
@@ -74,7 +74,7 @@
                 android:imeOptions="actionDone"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
-                android:paddingStart="10dp"
+                android:paddingStart="@dimen/small_margin"
                 android:selectAllOnFocus="true"
                 android:textColor="@color/transparent_light"
                 android:textColorHint="@color/white"
@@ -90,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
 
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="@dimen/bigger_medium_margin"
 
                 android:background="@color/transparent_very_dark"
                 android:hint="@string/register_prompt_repeat_password"
@@ -98,7 +98,7 @@
                 android:imeOptions="actionDone"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
-                android:paddingStart="10dp"
+                android:paddingStart="@dimen/small_margin"
                 android:selectAllOnFocus="true"
                 android:textColor="@color/transparent_light"
                 android:textColorHint="@color/white"
@@ -117,8 +117,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_gravity="start"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="@dimen/bigger_medium_margin"
+                android:layout_marginBottom="@dimen/small_margin"
 
                 android:background="@drawable/buttons_background"
                 android:text="@string/login_action_register"
@@ -136,8 +136,8 @@
                 android:layout_width="100dp"
                 android:layout_height="5dp"
 
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginBottom="@dimen/small_margin"
 
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"

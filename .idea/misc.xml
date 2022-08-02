@@ -37,10 +37,11 @@
         <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/Applicant_Tracking_System/app/src/main/res/drawable/buttons_darker_background.xml" value="0.1" />
         <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/Applicant_Tracking_System/app/src/main/res/drawable/login_background.xml" value="0.203" />
         <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/Applicant_Tracking_System/app/src/main/res/drawable/login_forgot_password_button.xml" value="0.203" />
-        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/Applicant_Tracking_System/app/src/main/res/layout/activity_company_register.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/Applicant_Tracking_System/app/src/main/res/layout/activity_company_register.xml" value="0.1" />
         <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/Applicant_Tracking_System/app/src/main/res/layout/activity_freelancer_register.xml" value="0.358695652173913" />
         <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/Applicant_Tracking_System/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
         <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/Applicant_Tracking_System/app/src/main/res/layout/activity_start.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/julka/Desktop/Studia/OwnProjects/AndroidStudio_projects/Applicant_Tracking_System/app/src/main/res/xml/app_restrictions.xml" value="0.38229166666666664" />
       </map>
     </option>
   </component>

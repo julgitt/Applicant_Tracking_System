@@ -7,4 +7,12 @@
     <dimen name="small_text_size">15sp</dimen>
     <dimen name="medium_small_text_size">20sp</dimen>
     <dimen name="medium_text_size">25sp</dimen>
+    <dimen name="big_margin">30dp</dimen>
+    <dimen name="small_margin">10dp</dimen>
+    <dimen name="huge_margin">50dp</dimen>
+    <dimen name="medium_margin">20dp</dimen>
+    <dimen name="bigger_medium_margin">25dp</dimen>
+    <dimen name="smaller_margin">5dp</dimen>
+    <dimen name="bigger_margin">35dp</dimen>
+    <dimen name="large_margin">40dp</dimen>
 </resources>

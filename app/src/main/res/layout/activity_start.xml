@@ -49,9 +49,11 @@
             android:id="@+id/view4"
             android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="20dp"
+
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/smaller_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+
             android:background="@color/transparent_medium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -64,11 +66,12 @@
             android:id="@+id/start_for_companies_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
 
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+
             android:background="@drawable/buttons_background"
             android:text="@string/start_for_companies"
             android:textColor="@color/primaryTextColor"
@@ -84,10 +87,11 @@
             android:id="@+id/start_for_freelancers_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
 
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+
             android:background="@drawable/buttons_background"
             android:text="@string/start_for_freelancers"
             android:textColor="@color/primaryTextColor"

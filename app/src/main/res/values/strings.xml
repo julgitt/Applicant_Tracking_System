@@ -14,7 +14,7 @@
     <string name="start_for_freelancers">for freelancers</string>
     <string name="start_for_companies">for companies</string>
     <string name="start_choose_your_version">Choose your version</string>
-    <!-- login panel -->
+
     <string name="title_activity_login">LoginActivity</string>
     <string name="login_prompt_email">Email</string>
     <string name="login_prompt_password">Password</string>

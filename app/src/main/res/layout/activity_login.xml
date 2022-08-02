@@ -25,7 +25,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="@dimen/big_margin"
 
             android:gravity="center"
             android:text="@string/login_text"
@@ -44,20 +44,20 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
 
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/huge_margin"
+            android:layout_marginEnd="@dimen/small_margin"
 
             android:background="@color/transparent_very_dark"
-            android:textSize="@dimen/small_text_size"
-
             android:hint="@string/login_prompt_email"
+
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
-            android:paddingStart="10dp"
+            android:paddingStart="@dimen/small_margin"
             android:selectAllOnFocus="true"
             android:textColor="@color/transparent_light"
             android:textColorHint="@color/white"
+            android:textSize="@dimen/small_text_size"
 
 
             app:layout_constraintBottom_toBottomOf="parent"
@@ -73,23 +73,23 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
 
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/small_margin"
             android:background="@color/transparent_very_dark"
 
             android:hint="@string/login_prompt_password"
-            android:textSize="@dimen/small_text_size"
-
-
             android:imeActionLabel="@string/login_action_sign_in"
+
+
             android:imeOptions="actionDone"
             android:importantForAutofill="no"
             android:inputType="textPassword"
-            android:paddingStart="10dp"
+            android:paddingStart="@dimen/small_margin"
             android:selectAllOnFocus="true"
             android:textColor="@color/transparent_light"
             android:textColorHint="@color/white"
+            android:textSize="@dimen/small_text_size"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +104,7 @@
             android:layout_width="170dp"
             android:layout_height="50dp"
 
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="@dimen/bigger_medium_margin"
 
             android:background="@drawable/buttons_background"
 
@@ -124,7 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/smaller_margin"
 
             android:background="@color/transparent"
 
@@ -145,10 +145,10 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
 
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
 
             android:background="@color/transparent_medium"
 
@@ -164,7 +164,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="@dimen/bigger_margin"
 
             android:gravity="center"
             android:text="@string/login_register_text"
@@ -183,7 +183,7 @@
             android:layout_width="170dp"
             android:layout_height="50dp"
 
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/small_margin"
 
             android:background="@drawable/buttons_darker_background"
 
@@ -203,7 +203,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="@dimen/big_margin"
 
             android:gravity="center"
             android:text="@string/or_text"
@@ -220,7 +220,7 @@
             android:layout_width="150dp"
             android:layout_height="2dp"
 
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="@dimen/large_margin"
 
             android:background="@color/transparent_medium"
 
@@ -235,7 +235,7 @@
             android:layout_height="2dp"
 
 
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="@dimen/large_margin"
 
             android:background="@color/transparent_medium"
 
@@ -250,7 +250,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="@dimen/big_margin"
 
             android:background="@color/transparent"
             android:src="@mipmap/google_icon"
@@ -267,7 +267,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="@dimen/big_margin"
 
             android:background="@color/transparent"
             android:src="@mipmap/facebook_icon"
@@ -284,7 +284,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="@dimen/big_margin"
 
             android:background="@color/transparent"
             android:src="@mipmap/instagram_icon"
