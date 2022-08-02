@@ -1,6 +1,8 @@
 package com.example.applicanttrackingsystem.data
 
+import androidx.lifecycle.MutableLiveData
 import com.example.applicanttrackingsystem.data.model.LoggedInUser
+import com.google.firebase.auth.FirebaseUser
 import java.io.IOException
 
 /**

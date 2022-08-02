@@ -1,6 +1,8 @@
 package com.example.applicanttrackingsystem.data
 
+import androidx.lifecycle.MutableLiveData
 import com.example.applicanttrackingsystem.data.model.LoggedInUser
+import com.google.firebase.auth.FirebaseUser
 
 /**
  * Class that requests authentication and user information from the remote data source and
@@ -8,6 +10,7 @@ import com.example.applicanttrackingsystem.data.model.LoggedInUser
  */
 
 class LoginRepository(val dataSource: LoginDataSource) {
+
 
     // in-memory cache of the loggedInUser object
     var user: LoggedInUser? = null
