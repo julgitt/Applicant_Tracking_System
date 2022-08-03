@@ -7,9 +7,6 @@ import androidx.lifecycle.ViewModel
 import com.example.applicanttrackingsystem.R
 import com.example.applicanttrackingsystem.data.LoginRepository
 import com.example.applicanttrackingsystem.data.Result
-import com.example.applicanttrackingsystem.data.model.AuthAppRepository
-import com.example.applicanttrackingsystem.ui.register.RegisterResult
-import com.google.firebase.auth.FirebaseUser
 
 
 /*  When you turn your phone horizontally, the data will be destroyed if you don't handle it properly
@@ -17,14 +14,14 @@ import com.google.firebase.auth.FirebaseUser
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 
-    private val _loginForm = MutableLiveData<LoginFormState>() //contains password and login that we typed
+    private val _loginForm =
+        MutableLiveData<LoginFormState>() //contains password and login that we typed
     val loginFormState: LiveData<LoginFormState> = _loginForm
 
     private val _loginResult = MutableLiveData<LoginResult>()
     val loginResult: LiveData<LoginResult> = _loginResult
 
     fun login(username: String, password: String) {
-
         when (val result = loginRepository.login(username, password)) {
             is Result.Success -> {
                 _loginResult.value =
@@ -36,7 +33,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         }
     }
 
-    fun loginDataChanged(username: String, password: String) {
+    fun loginDataChanged(username: String) {
         if (!isUserNameValid(username)) {
             _loginForm.value = LoginFormState(usernameError = R.string.login_invalid_username)
         } else {

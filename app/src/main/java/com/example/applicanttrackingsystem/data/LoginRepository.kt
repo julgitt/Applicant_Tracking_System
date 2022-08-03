@@ -1,8 +1,6 @@
 package com.example.applicanttrackingsystem.data
 
-import androidx.lifecycle.MutableLiveData
 import com.example.applicanttrackingsystem.data.model.LoggedInUser
-import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.runBlocking
 
 /**
@@ -30,7 +28,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
         dataSource.logout()
     }
 
-    fun login(username: String, password: String): Result<LoggedInUser> = runBlocking{
+    fun login(username: String, password: String): Result<LoggedInUser> = runBlocking {
         // handle login
         val result = dataSource.login(username, password)
 
@@ -46,4 +44,22 @@ class LoginRepository(val dataSource: LoginDataSource) {
         // If user credentials will be cached in local storage, it is recommended it be encrypted
         // @see https://developer.android.com/training/articles/keystore
     }
+
+    fun register(
+        username: String,
+        password: String,
+        repeatPassword: String,
+        nip: String,
+        phone: String
+    ) = runBlocking {
+        val result = if (nip != "none") dataSource.registerCompany(username, password)
+        else dataSource.registerFreelancer(username, password)
+
+        if (result is Result.Success) {
+            setLoggedInUser(result.data)
+        }
+
+        return@runBlocking result
+    }
+
 }

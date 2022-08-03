@@ -2,29 +2,24 @@ package com.example.applicanttrackingsystem.ui.register
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.applicanttrackingsystem.CompanyActivity
 import com.example.applicanttrackingsystem.R
-import com.example.applicanttrackingsystem.databinding.ActivityCompanyRegisterBinding
 import com.example.applicanttrackingsystem.databinding.ActivityFreelancerRegisterBinding
-import com.example.applicanttrackingsystem.databinding.ActivityLoginBinding
 import com.example.applicanttrackingsystem.ui.login.LoggedInUserView
-import com.example.applicanttrackingsystem.ui.login.LoginViewModel
 import com.example.applicanttrackingsystem.ui.login.afterTextChanged
 
-class RegisterFreelancerActivity: AppCompatActivity() {
+class RegisterFreelancerActivity : AppCompatActivity() {
 
     private lateinit var registerViewModel: RegisterViewModel
     private lateinit var binding: ActivityFreelancerRegisterBinding
-    private lateinit var freelancerActivity : Intent
+    private lateinit var newActivity: Intent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,8 +32,9 @@ class RegisterFreelancerActivity: AppCompatActivity() {
         val registerButton = binding.registerButton
         val loading = binding.registerLoading
 
-        registerViewModel = ViewModelProvider(this, RegisterViewModelFactory())
-            .get(RegisterViewModel::class.java)
+        newActivity = Intent(this, CompanyActivity::class.java)
+        registerViewModel =
+            ViewModelProvider(this, RegisterViewModelFactory())[RegisterViewModel::class.java]
 
         registerViewModel.registerFormState.observe(this@RegisterFreelancerActivity, Observer {
             val registerState = it ?: return@Observer
@@ -68,7 +64,6 @@ class RegisterFreelancerActivity: AppCompatActivity() {
                 updateUiWithUser(registerResult.success)
             }
             setResult(RESULT_OK)
-
 
 
             //Complete and destroy login activity once successful
@@ -104,6 +99,7 @@ class RegisterFreelancerActivity: AppCompatActivity() {
                         registerViewModel.register(
                             email.text.toString(),
                             password.text.toString(),
+                            repeatPassword.text.toString()
                         )
                 }
                 false
@@ -111,11 +107,16 @@ class RegisterFreelancerActivity: AppCompatActivity() {
 
             registerButton.setOnClickListener {
                 loading.visibility = View.VISIBLE
-                registerViewModel.register(email.text.toString(), password.text.toString())
+                registerViewModel.register(
+                    email.text.toString(),
+                    password.text.toString(),
+                    repeatPassword.text.toString()
+                )
             }
 
         }
     }
+
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.login_welcome)
         val displayName = model.displayName
@@ -125,6 +126,7 @@ class RegisterFreelancerActivity: AppCompatActivity() {
             "$welcome $displayName",
             Toast.LENGTH_LONG
         ).show()
+        startActivity(newActivity)
     }
 
     private fun showRegisterFailed(@StringRes errorString: Int) {

@@ -16,18 +16,16 @@ import com.example.applicanttrackingsystem.CompanyActivity
 import com.example.applicanttrackingsystem.databinding.ActivityLoginBinding
 import com.example.applicanttrackingsystem.ui.register.RegisterCompanyActivity
 import com.example.applicanttrackingsystem.ui.register.RegisterFreelancerActivity
-import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginViewModel: LoginViewModel
     private lateinit var binding: ActivityLoginBinding
-    private lateinit var bundle : Bundle
-    private lateinit var type : String
-    private lateinit var companyActivity : Intent
-    private lateinit var freelancerActivity : Intent
-    private lateinit var newActivity : Intent
-    private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
+    private lateinit var bundle: Bundle
+    private lateinit var type: String
+    private lateinit var companyActivity: Intent
+    private lateinit var freelancerActivity: Intent
+    private lateinit var newActivity: Intent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +40,7 @@ class LoginActivity : AppCompatActivity() {
         val password = binding.loginPassword
         val loginButton = binding.loginButton
         val registerButton = binding.loginRegisterButton
+        //TODO:Forgot password functionality
         val forgotPassword = binding.loginForgotPasswordButton
         val loading = binding.loginLoading
 
@@ -49,7 +48,8 @@ class LoginActivity : AppCompatActivity() {
         freelancerActivity = Intent(this, RegisterFreelancerActivity::class.java)
         newActivity = Intent(this, CompanyActivity::class.java)
 
-        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())[LoginViewModel::class.java]
+        loginViewModel =
+            ViewModelProvider(this, LoginViewModelFactory())[LoginViewModel::class.java]
 
         //observer provides us the current value of a LiveData
         loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
@@ -82,16 +82,14 @@ class LoginActivity : AppCompatActivity() {
 
         username.afterTextChanged {
             loginViewModel.loginDataChanged(
-                username.text.toString(),
-                password.text.toString()
+                username.text.toString()
             )
         }
 
         password.apply {
             afterTextChanged {
                 loginViewModel.loginDataChanged(
-                    username.text.toString(),
-                    password.text.toString()
+                    username.text.toString()
                 )
             }
 
@@ -110,18 +108,17 @@ class LoginActivity : AppCompatActivity() {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
             }
-
-            registerButton.setOnClickListener {
-                when (intent.getStringExtra("type")!!) {
-                    "company" -> {
-                        startActivity(companyActivity)
-                    }
-                    "freelancer" -> {
-                        startActivity(freelancerActivity)
-                    }
-                    else -> {
-                        throw Exception("Something went wrong")
-                    }
+        }
+        registerButton.setOnClickListener {
+            when (intent.getStringExtra("type")!!) {
+                "company" -> {
+                    startActivity(companyActivity)
+                }
+                "freelancer" -> {
+                    startActivity(freelancerActivity)
+                }
+                else -> {
+                    throw Exception("Something went wrong")
                 }
             }
         }

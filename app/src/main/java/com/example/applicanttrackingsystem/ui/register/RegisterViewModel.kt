@@ -8,7 +8,6 @@ import com.example.applicanttrackingsystem.R
 import com.example.applicanttrackingsystem.data.LoginRepository
 import com.example.applicanttrackingsystem.data.Result
 import com.example.applicanttrackingsystem.ui.login.LoggedInUserView
-import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 
@@ -24,9 +23,15 @@ class RegisterViewModel(private val loginRepository: LoginRepository) : ViewMode
     private val _registerResult = MutableLiveData<RegisterResult>()
     val registerResult: LiveData<RegisterResult> = _registerResult
 
-    fun register(username: String, password: String) {
+    fun register(
+        username: String,
+        password: String,
+        repeatPassword: String,
+        nip: String = "none",
+        phone: String = "none"
+    ) {
         // can be launched in a separate asynchronous job
-        val result = loginRepository.login(username, password)
+        val result = loginRepository.register(username, password, repeatPassword, nip, phone)
 
         if (result is Result.Success) {
             _registerResult.value =
@@ -42,13 +47,20 @@ class RegisterViewModel(private val loginRepository: LoginRepository) : ViewMode
         } else if (!isPasswordValid(password)) {
             _registerForm.value = RegisterFormState(passwordError = R.string.login_invalid_password)
         } else if (!isRepeatPasswordValid(password, repeatPassword)) {
-            _registerForm.value = RegisterFormState(repeatPasswordError = R.string.login_invalid_repeat_password)
+            _registerForm.value =
+                RegisterFormState(repeatPasswordError = R.string.login_invalid_repeat_password)
         } else {
             _registerForm.value = RegisterFormState(isDataValid = true)
         }
     }
 
-    fun registerCompanyDataChanged(username: String, password: String, repeatPassword: String, nip: String, phone: String) {
+    fun registerCompanyDataChanged(
+        username: String,
+        password: String,
+        repeatPassword: String,
+        nip: String,
+        phone: String
+    ) {
         if (!phoneValid(phone)) {
             _registerForm.value = RegisterFormState(phoneNumberError = R.string.login_invalid_phone)
         } else if (!isUserNameValid(username)) {
@@ -56,13 +68,15 @@ class RegisterViewModel(private val loginRepository: LoginRepository) : ViewMode
         } else if (!isPasswordValid(password)) {
             _registerForm.value = RegisterFormState(passwordError = R.string.login_invalid_password)
         } else if (!isRepeatPasswordValid(password, repeatPassword)) {
-            _registerForm.value = RegisterFormState(repeatPasswordError = R.string.login_invalid_repeat_password)
+            _registerForm.value =
+                RegisterFormState(repeatPasswordError = R.string.login_invalid_repeat_password)
         } else if (!nipValid(nip)) {
             _registerForm.value = RegisterFormState(nipNumberError = R.string.login_invalid_nip)
         } else {
             _registerForm.value = RegisterFormState(isDataValid = true)
         }
     }
+    //TODO: Check if the username or password is already taken
 
     // A placeholder username validation check
     private fun isUserNameValid(username: String): Boolean {
@@ -81,8 +95,9 @@ class RegisterViewModel(private val loginRepository: LoginRepository) : ViewMode
     private fun isRepeatPasswordValid(password: String, repeatPassword: String): Boolean {
         return password == repeatPassword
     }
+
     private fun phoneValid(phone: String): Boolean {
-        if ( phone.length < 9) return false
+        if (phone.length < 9) return false
         phone.replace("""[-()+ ]""".toRegex(), "")
         val reg = "^[1-9]\\d{8}\$"
         val pattern: Pattern = Pattern.compile(reg)
@@ -96,10 +111,10 @@ class RegisterViewModel(private val loginRepository: LoginRepository) : ViewMode
             return false
         }
         val weight = listOf(6, 5, 7, 2, 3, 4, 5, 6, 7)
-        var sum = 0;
+        var sum = 0
         val controlNumber = nip.substring(9, 10).toInt()
-        var index = 0;
-        while (index < weight.size){
+        var index = 0
+        while (index < weight.size) {
             sum += nip[index].digitToInt() * weight[index]
             index++
         }
