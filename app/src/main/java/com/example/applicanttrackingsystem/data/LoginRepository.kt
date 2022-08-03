@@ -3,6 +3,7 @@ package com.example.applicanttrackingsystem.data
 import androidx.lifecycle.MutableLiveData
 import com.example.applicanttrackingsystem.data.model.LoggedInUser
 import com.google.firebase.auth.FirebaseUser
+import kotlinx.coroutines.runBlocking
 
 /**
  * Class that requests authentication and user information from the remote data source and
@@ -13,8 +14,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
 
 
     // in-memory cache of the loggedInUser object
-    var user: LoggedInUser? = null
-        private set
+    private var user: LoggedInUser? = null
 
     val isLoggedIn: Boolean
         get() = user != null
@@ -30,7 +30,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
         dataSource.logout()
     }
 
-    fun login(username: String, password: String): Result<LoggedInUser> {
+    fun login(username: String, password: String): Result<LoggedInUser> = runBlocking{
         // handle login
         val result = dataSource.login(username, password)
 
@@ -38,7 +38,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
             setLoggedInUser(result.data)
         }
 
-        return result
+        return@runBlocking result
     }
 
     private fun setLoggedInUser(loggedInUser: LoggedInUser) {

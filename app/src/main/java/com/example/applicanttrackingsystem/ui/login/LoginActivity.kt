@@ -2,21 +2,21 @@ package com.example.applicanttrackingsystem.ui.login
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.annotation.StringRes
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
+import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.applicanttrackingsystem.CompanyActivity
 import com.example.applicanttrackingsystem.databinding.ActivityLoginBinding
-
-import com.example.applicanttrackingsystem.R
 import com.example.applicanttrackingsystem.ui.register.RegisterCompanyActivity
 import com.example.applicanttrackingsystem.ui.register.RegisterFreelancerActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
@@ -26,6 +26,8 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var type : String
     private lateinit var companyActivity : Intent
     private lateinit var freelancerActivity : Intent
+    private lateinit var newActivity : Intent
+    private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,9 +47,10 @@ class LoginActivity : AppCompatActivity() {
 
         companyActivity = Intent(this, RegisterCompanyActivity::class.java)
         freelancerActivity = Intent(this, RegisterFreelancerActivity::class.java)
+        newActivity = Intent(this, CompanyActivity::class.java)
 
-        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
-            .get(LoginViewModel::class.java)
+        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())[LoginViewModel::class.java]
+
         //observer provides us the current value of a LiveData
         loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
             val loginState = it ?: return@Observer
@@ -70,6 +73,7 @@ class LoginActivity : AppCompatActivity() {
             if (loginResult.success != null) {
                 updateUiWithUser(loginResult.success)
             }
+
             setResult(RESULT_OK)
 
             //Complete and destroy login activity once successful
@@ -124,7 +128,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
-        val welcome = getString(R.string.login_welcome)
+        val welcome = getString(com.example.applicanttrackingsystem.R.string.login_welcome)
         val displayName = model.displayName
         // TODO : initiate successful logged in experience
         Toast.makeText(
@@ -132,6 +136,7 @@ class LoginActivity : AppCompatActivity() {
             "$welcome $displayName",
             Toast.LENGTH_LONG
         ).show()
+        startActivity(newActivity)
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {

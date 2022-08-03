@@ -45,4 +45,7 @@
     <string name="register_prompt_nip">Company nip</string>
 
 
+    <string name="title_activity_main_company">Leanback MainCompanyActivity</string>
+
+
 </resources>
