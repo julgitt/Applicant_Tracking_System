@@ -68,36 +68,45 @@
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="RtlSymmetry" />
 
-        <EditText
-            android:id="@+id/login_password"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etLoginPasswordLayout"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-
-            android:layout_marginStart="@dimen/small_margin"
-            android:layout_marginTop="@dimen/medium_margin"
-            android:layout_marginEnd="@dimen/small_margin"
-            android:background="@color/transparent_very_dark"
-
-            android:hint="@string/login_prompt_password"
-            android:imeActionLabel="@string/login_action_sign_in"
-
-
-            android:imeOptions="actionDone"
-            android:importantForAutofill="no"
-            android:inputType="textPassword"
-            android:paddingStart="@dimen/small_margin"
-            android:selectAllOnFocus="true"
-            android:textColor="@color/transparent_light"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/small_text_size"
-
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/transparent_light"
             app:layout_constraintBottom_toBottomOf="parent"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@id/login"
             app:layout_constraintTop_toBottomOf="@id/login_username"
             app:layout_constraintVertical_bias="0.0"
-            tools:ignore="RtlSymmetry" />
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:background="@color/transparent_very_dark"
+
+                android:hint="@string/login_prompt_password"
+                android:imeActionLabel="@string/login_action_sign_in"
+
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/small_margin"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/transparent_light"
+                android:textSize="@dimen/small_text_size"
+
+                tools:ignore="RtlSymmetry" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/login_button"
@@ -116,7 +125,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_password"
+            app:layout_constraintTop_toBottomOf="@+id/etLoginPasswordLayout"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button

@@ -33,8 +33,13 @@
 
         <activity
             android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
+            android:exported="true"
+            android:label="@string/title_activity_login">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+        </activity>
         <activity
             android:name=".ui.register.RegisterCompanyActivity"
             android:exported="true"
@@ -46,15 +51,10 @@
             android:label="@string/title_activity_freelancer_register"
             android:theme="@style/Theme.ApplicantTrackingSystem.NoActionBar" />
         <activity
-            android:name=".StartActivity"
+            android:name=".TypeChoiceActivity"
             android:exported="true"
             android:label="@string/title_activity_start"
-            android:theme="@style/Theme.ApplicantTrackingSystem.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.ApplicantTrackingSystem.NoActionBar" />
     </application>
 
 </manifest>

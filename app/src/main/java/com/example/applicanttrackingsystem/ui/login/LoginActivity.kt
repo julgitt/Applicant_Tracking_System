@@ -13,25 +13,25 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.applicanttrackingsystem.CompanyActivity
+import com.example.applicanttrackingsystem.TypeChoiceActivity
 import com.example.applicanttrackingsystem.databinding.ActivityLoginBinding
-import com.example.applicanttrackingsystem.ui.register.RegisterCompanyActivity
-import com.example.applicanttrackingsystem.ui.register.RegisterFreelancerActivity
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginViewModel: LoginViewModel
     private lateinit var binding: ActivityLoginBinding
-    private lateinit var bundle: Bundle
-    private lateinit var type: String
-    private lateinit var companyActivity: Intent
-    private lateinit var freelancerActivity: Intent
-    private lateinit var newActivity: Intent
+    //private lateinit var bundle: Bundle
+    //private lateinit var type: String
+    //private lateinit var companyActivity: Intent
+    //private lateinit var freelancerActivity: Intent
+    private lateinit var userActivity: Intent
+    private lateinit var registerActivity: Intent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        bundle = intent.extras!!
-        type = bundle.getString("type").toString()
+        //bundle = intent.extras!!
+        //type = bundle.getString("type").toString()
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -44,9 +44,11 @@ class LoginActivity : AppCompatActivity() {
         val forgotPassword = binding.loginForgotPasswordButton
         val loading = binding.loginLoading
 
-        companyActivity = Intent(this, RegisterCompanyActivity::class.java)
-        freelancerActivity = Intent(this, RegisterFreelancerActivity::class.java)
-        newActivity = Intent(this, CompanyActivity::class.java)
+        //companyActivity = Intent(this, RegisterCompanyActivity::class.java)
+        //freelancerActivity = Intent(this, RegisterFreelancerActivity::class.java)
+        userActivity = Intent(this, CompanyActivity::class.java)
+        registerActivity = Intent(this, TypeChoiceActivity::class.java)
+        
 
         loginViewModel =
             ViewModelProvider(this, LoginViewModelFactory())[LoginViewModel::class.java]
@@ -110,7 +112,8 @@ class LoginActivity : AppCompatActivity() {
             }
         }
         registerButton.setOnClickListener {
-            when (intent.getStringExtra("type")!!) {
+            startActivity(registerActivity)
+           /* when (intent.getStringExtra("type")!!) {
                 "company" -> {
                     startActivity(companyActivity)
                 }
@@ -120,7 +123,7 @@ class LoginActivity : AppCompatActivity() {
                 else -> {
                     throw Exception("Something went wrong")
                 }
-            }
+            }*/
         }
     }
 
@@ -133,7 +136,7 @@ class LoginActivity : AppCompatActivity() {
             "$welcome $displayName",
             Toast.LENGTH_LONG
         ).show()
-        startActivity(newActivity)
+        startActivity(userActivity)
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {

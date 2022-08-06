@@ -138,56 +138,73 @@
                 app:layout_constraintVertical_bias="0.0"
                 tools:ignore="RtlSymmetry" />
 
-            <EditText
-                android:id="@+id/register_password"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-
-                android:layout_marginTop="@dimen/medium_margin"
-
-                android:background="@color/transparent_very_dark"
-                android:hint="@string/login_prompt_password"
-                android:imeActionLabel="@string/login_action_sign_in"
-                android:imeOptions="actionDone"
-                android:importantForAutofill="no"
-                android:inputType="textPassword"
-                android:paddingStart="@dimen/small_margin"
-                android:selectAllOnFocus="true"
-                android:textColor="@color/transparent_light"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etRegisterPasswordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:textColorHint="@color/white"
 
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/register_repeat_password"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/register_username"
                 app:layout_constraintVertical_bias="0.0"
-                tools:ignore="RtlSymmetry" />
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/white">
 
-            <EditText
-                android:id="@+id/register_repeat_password"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
 
-                android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginTop="@dimen/bigger_medium_margin"
 
-                android:background="@color/transparent_very_dark"
-                android:hint="@string/register_prompt_repeat_password"
-                android:imeActionLabel="@string/login_action_sign_in"
-                android:imeOptions="actionDone"
-                android:importantForAutofill="no"
-                android:inputType="textPassword"
-                android:paddingStart="@dimen/small_margin"
-                android:selectAllOnFocus="true"
-                android:textColor="@color/transparent_light"
+                    android:background="@color/transparent_very_dark"
+                    android:hint="@string/login_prompt_password"
+                    android:imeActionLabel="@string/login_action_sign_in"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/small_margin"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/transparent_light"
+
+                    tools:ignore="RtlSymmetry" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etRegisterRepeatPasswordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:textColorHint="@color/white"
 
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/register_password"
+                app:layout_constraintTop_toBottomOf="@+id/etRegisterPasswordLayout"
                 app:layout_constraintVertical_bias="0.0"
-                tools:ignore="RtlSymmetry" />
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_repeat_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:layout_marginTop="@dimen/bigger_medium_margin"
+
+                    android:background="@color/transparent_very_dark"
+                    android:hint="@string/register_prompt_repeat_password"
+                    android:imeActionLabel="@string/login_action_sign_in"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/small_margin"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/transparent_light"
+
+                    tools:ignore="RtlSymmetry" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <EditText
                 android:id="@+id/register_nip_number"
@@ -210,7 +227,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/register_repeat_password"
+                app:layout_constraintTop_toBottomOf="@+id/etRegisterRepeatPasswordLayout"
                 app:layout_constraintVertical_bias="0.0"
                 tools:ignore="RtlSymmetry" />
 

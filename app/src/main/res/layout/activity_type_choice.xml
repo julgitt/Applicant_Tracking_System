@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_centerHorizontal="true"
     android:background="@drawable/background"
-    tools:context=".StartActivity">
+    tools:context=".TypeChoiceActivity">
 
     <!-- Illustration by https://icons8.com/illustrations/author/zD2oqC8lLBBA from https://icons8.com/illustrations-->
 
